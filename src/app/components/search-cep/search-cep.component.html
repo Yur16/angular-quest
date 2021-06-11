@@ -1,0 +1,29 @@
+<main class="wrapper">
+  <div class="form-group">
+    <input
+      type="text"
+      class="input-block"
+      #cep
+      placeholder="Digite um CEP válido"
+      [specialCharacters]="[ '[' ,']' , '\\', '-' ]" mask="00000-000"
+    >
+    <button (click)="getService(cep.value)" type='submit'class="btn"> Pesquisar </button>
+  </div>
+  <div class="container">
+    <ng-container>
+      <div *ngFor="let item of data| keyvalue"> 
+        <span class="address-text"> {{item.key }}: {{ item.value }}</span>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!data && !erro" >
+      <span >
+        Os dados irão aparecer aqui!! :D
+      </span>
+    </ng-container>
+    <ng-container *ngIf="erro" >
+      <span >
+        Ooops parce que você informou um CEP inválido
+      </span>
+    </ng-container>
+  </div>
+</main>

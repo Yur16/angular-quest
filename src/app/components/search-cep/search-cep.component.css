@@ -1,0 +1,50 @@
+.wrapper {
+    flex: 1;
+    margin: 80px 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+
+    border: 1px solid #eee;
+    color: #eee;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.input-block {
+    width: 300px;
+    border: 0;
+    height: 56px;
+    padding: 10px 30px;
+    font-size: 26px;
+    border-radius: 8px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.btn {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+
+.address-text {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

@@ -1,0 +1,110 @@
+<main class="wrapper">
+  <div class="header">
+    <h2 class="title">Tabela de endereços do Json Server</h2>
+    <div>
+      <button
+        class="btn" 
+        data-toggle="modal" data-target="#myModal"
+      >
+          Salvar
+      </button>
+    </div>
+  </div>
+  <div class="container" class="list">
+    <table>
+      <tr>
+        <th>id</th>
+        <th>Bairro</th>
+        <th>CEP</th> 
+        <th>Complemento</th>
+        <th>DDD</th> 
+        <th>GIA</th>
+        <th>IBGE</th> 
+        <th>Localidade</th> 
+        <th>Logradouro</th>
+        <th>SIAFI</th> 
+        <th>UF</th>
+        <th>Criado em</th>
+      </tr>
+
+      <tr *ngFor="let item of data">
+        <td>
+          {{item.id}}
+        </td>
+        <td>
+          {{item.bairro || '---'}}
+        </td>
+        <td>
+          {{item.cep || '---'}}
+        </td>
+        <td>
+          {{item.complemento || '---'}}
+        </td>
+        <td>
+          {{item.ddd || '---'}}
+        </td>
+        <td>
+          {{item.gia || '---'}}
+        </td>
+        <td>
+          {{item.ibge || '---'}}
+        </td>
+        <td>
+          {{item.localidade || '---'}}
+        </td>
+        <td>
+          {{item.logradouro || '---'}}
+        </td>
+        <td>
+          {{item.siafi || '---'}}
+        </td>
+        <td>
+          {{item.uf || '---'}}
+        </td>
+        <td>
+          {{item.createdAt}}
+        </td>
+        <button class="btn-delete" (click)="delete(item.id)">
+          &times;
+        </button>
+      </tr>
+    </table>
+  </div>
+</main>
+
+
+ 
+
+
+
+
+
+<!-- Modal -->
+ <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Confirme sua a ação</h4>
+      </div>
+      <div class="modal-body">
+        <p>Tem certerza que quer adicionar esse endereço a tabela?</p>
+      </div>
+      <div class="modal-footer">
+        <button
+        type="button"
+        class="btn"
+        data-dismiss="modal"
+        (click)="Add()"
+        >
+        Sim, adicionar
+      </button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+  

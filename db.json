@@ -1,0 +1,18 @@
+{
+  "addresses": [
+    {
+      "cep": "63139-500",
+      "logradouro": "",
+      "complemento": "",
+      "bairro": "Bela Vista",
+      "localidade": "Crato",
+      "uf": "CE",
+      "ibge": "2304202",
+      "gia": "",
+      "ddd": "88",
+      "siafi": "1385",
+      "createdAt": "16:57 11/57/2021",
+      "id": 1
+    }
+  ]
+}
